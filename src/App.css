@@ -1,0 +1,179 @@
+.app{
+  width: 520px;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color:rgb(238, 238, 238);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+
+  --bgCol :rgb(19, 19, 128); 
+}
+.app::-webkit-scrollbar{
+  display: none;
+}
+
+.topBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  padding-right: 20px;
+  padding-left: 20px;
+  top: 0;
+  margin: 0;
+  height: 80px;
+  background-color: var(--bgCol);
+  position: sticky;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.app__title{
+  display: flex;
+  justify-content: center;
+}
+.app__title h4{
+  margin-top: 3px;
+}
+.list__icon{
+  font-size: 30px;
+  margin-right: 10px;
+}
+.list__of__todos{
+  flex: 1;
+  position: relative;
+  display: flex;
+  max-height: 89%;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+.list__of__todos::-webkit-scrollbar{
+  display: none;
+}
+
+.completed{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.todo__card{
+  width: 90%;
+  height: 50px;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  bottom: 0.1px solid rgb(207, 207, 207);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo__card h4{
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card__left p{
+  font-family: arial;
+}
+.card__right{
+  height: 40px;
+  width: auto;
+  display: flex;
+}
+.card__right div{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.card__right .del,.card__right .complete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: var(--bgCol);
+}
+
+
+
+.add__todo{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: var(--bgCol);
+  bottom: 10px;
+  right: 10px;
+}
+.add__todo:hover{
+  background-color:  rgb(20, 20, 167);
+  cursor: pointer;
+}
+
+.add__card__background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.315);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.add__card{
+  width: 320px;
+  min-height: 280px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+
+}
+.add__card .close{
+  font-size: 20px;
+  color: var(--bgCol);
+  display: flex;
+  width: 300px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 30px;
+  padding-top: 0;
+}
+.add__card .close span:hover{
+  color: black;
+  cursor: pointer;
+}
+
+.add__card input{
+  width: 250px;
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  border: 0.1px solid rgb(221, 221, 221);
+  margin-top: 10px;
+}
+.add__card button{
+  padding: 10px;
+  border: none;
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color:var(--bgCol) ;
+  margin-top: 20px;
+  cursor: pointer;
+}
